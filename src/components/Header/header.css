@@ -1,24 +1,23 @@
 .header {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1.5px solid lightgray;
-    margin: 0px 15px;
-    padding-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1.5px solid lightgray;
+  margin: 0 15px;
+  padding-bottom: 10px;
 }
 
 .header_nav {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  margin: 0px 15px;
+  margin: 0 15px;
 }
 
 .header_nav a {
   color: blue;
 }
-
 
 .header_logo {
   display: flex;
@@ -28,11 +27,11 @@
 }
 
 .header_RocketMissions {
-    display: flex;
-    gap: 20px;
-    margin-right: 10px;
-    border-right: 1px solid black;
-    padding-right: 10px;
+  display: flex;
+  gap: 20px;
+  margin-right: 10px;
+  border-right: 1px solid black;
+  padding-right: 10px;
 }
 
 .active {
