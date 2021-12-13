@@ -1,27 +1,24 @@
 import React from 'react';
-import { 
-  BrowserRouter,
-  Routes,
-  Route,
-  Navigate,
-} from 'react-router-dom';
+// import {
+//   Routes,
+//   Route,
+//   Navigate,
+// } from 'react-router-dom';
 import './App.css';
-import
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div className="App">
-      <BrowserRouter>
         <Header />
-        <div>
+        {/* <div>
           <Routes>
             <Route path="/" element={<Navigate to="/rockets" />} />
             <Route path="/rockets" element={<Rockets />} />
             <Route path="/missions" element={<Missions />} />
             <Route path="/myProfile" element={<MyProfile />} />
           </Routes>
-        </div>
-      </BrowserRouter>
+        </div> */}
     </div>
   );
 }
