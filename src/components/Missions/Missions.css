@@ -1,1 +1,52 @@
-* { margin: 0; }
+table,
+th,
+td {
+  border: 1px solid rgb(230, 226, 226);
+  border-collapse: collapse;
+  padding: 0.6rem 0.4rem;
+}
+
+button {
+  border-radius: 3px;
+  font-size: 14px;
+}
+
+.list-container {
+  margin: 2rem auto;
+  width: 90vw;
+  max-width: 1900px;
+}
+
+th {
+  text-align: left;
+}
+
+td {
+  vertical-align: top;
+}
+
+.button-container {
+  vertical-align: middle;
+  padding: 0 1rem;
+}
+
+span {
+  white-space: nowrap;
+}
+
+.button-status {
+  padding: 0.2rem 0.3rem;
+  font-weight: 600;
+  border: none;
+  background-color: grey;
+  color: white;
+}
+
+.button-join {
+  border: 1.5px solid black;
+  padding: 0.4rem 0.4rem;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(240, 240, 240);
+}
