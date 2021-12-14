@@ -1,25 +1,25 @@
-import { React, useEffect } from 'react';
-import { bindActionCreators } from 'redux';
-import { useSelector, useDispatch } from 'react-redux';
-import { loadMissionsData } from '../../redux/Missions/missions';
+import React from 'react';
+import MissionsInfo from './MissionsInfo';
+import './Missions.css';
 
-const Missions = () => {
-  const missions = useSelector((state) => state.missions);
-  const dispatch = useDispatch();
-  const loadMissionsAction = bindActionCreators(loadMissionsData, dispatch);
+const MissionsLists = () => (
+  <table className="list-container">
+    <tbody>
+      <tr>
+        <th>
+          Mission
+        </th>
+        <th>
+          Description
+        </th>
+        <th>
+          Status
+        </th>
+        <th aria-label="none" />
+      </tr>
+      <MissionsInfo />
+    </tbody>
+  </table>
+);
 
-  useEffect(() => {
-    loadMissionsAction();
-    return null;
-  }, []);
-
-  return (
-    <div>
-      {missions.map((mission) => (
-        <><p>{mission.mission_id}</p><p>{mission.mission_name}</p><p>{mission.description}</p></>
-      ))}
-    </div>
-  );
-};
-
-export default Missions;
+export default MissionsLists;
