@@ -9,10 +9,8 @@
 }
 
 .header_nav {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  margin: 0 15px;
+  display: none;
+  
 }
 
 .header_nav a {
@@ -36,4 +34,17 @@
 
 .active {
   text-decoration: underline;
+}
+
+/*Desktop Queries 768px up*/
+
+@media only screen and (min-width: 768px) {
+
+.header_nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0 15px;
+}
+
 }

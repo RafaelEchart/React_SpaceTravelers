@@ -4,6 +4,7 @@ import {
   Route,
   Navigate,
 } from 'react-router-dom';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './components/Header/Header';
 import MyProfile from './components/MyProfile/MyProfile';
@@ -14,7 +15,7 @@ function App() {
   return (
     <div className="App">
         <Header />
-        <div>
+        <div className='contentContainer'>
           <Routes>
             <Route path="/" element={<Navigate to="/rockets" />} />
             <Route path="/rockets" element={<Rockets />} />

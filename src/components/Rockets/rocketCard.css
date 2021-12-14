@@ -1,0 +1,52 @@
+.rocketCardContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1300px;
+    width: 95%;
+    margin-top: 20px;
+}
+
+.rocketCardContainer:last-child {
+    margin-bottom: 2%;
+}
+
+.rocketCardTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 90%;
+    margin-left: 15px;
+}
+
+.rocketCardTextContainer h2{
+    margin: 13px 0px 5px 0px;
+    font-size: 20px;
+}
+
+.rocketCardTextContainer span{
+    margin: 10px 0px;
+    font-size: 14px;
+}
+
+/*Desktop Queries 768px up*/
+
+@media only screen and (min-width: 768px) {
+
+    .rocketCardContainer {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: row;
+        margin-top: 2%;
+    }
+
+    .rocketCardContainer:last-child {
+        margin-bottom: 2%;
+    }
+
+    .rocketCardTextContainer h2{
+        margin: 0px;
+        font-size: 20px;
+    }
+    
+    }
