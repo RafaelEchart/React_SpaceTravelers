@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
+import { loadRockets } from '../../redux/Rockets/rockets';
 import './rocketCard.css';
 
 const Rockets = () => {
+  const dispatch = useDispatch();
+
   const rocketData = [
     {
       id: 1,
@@ -335,7 +339,12 @@ const Rockets = () => {
       rocket_type: 'rocket',
     },
   ];
-  console.log(rocketData);
+
+  useEffect(() => {
+    if (document.readyState !== 'complete') {
+      dispatch(loadRockets());
+    }
+  }, []);
 
   return (
 
