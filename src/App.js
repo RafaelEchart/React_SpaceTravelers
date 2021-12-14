@@ -9,7 +9,7 @@ import './App.css';
 import Header from './components/Header/Header';
 import MyProfile from './components/MyProfile/MyProfile';
 import Missions from './components/Missions/Missions';
-import Rockets from './components/Rockets/Rockets';
+import Rockets from './components/Rockets/RocketsPage';
 
 function App() {
   return (
