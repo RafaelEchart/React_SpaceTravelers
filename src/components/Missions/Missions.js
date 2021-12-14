@@ -1,10 +1,21 @@
-import React from 'react';
+import { React, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { loadMissionsData } from '../../redux/Missions/missions';
 import MissionsInfo from './MissionsInfo';
 import './Missions.css';
 
-const MissionsLists = () => (
-  <table className="list-container">
-    <tbody>
+const Missions = () => {
+  const missions = useSelector((state) => state.missions);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (missions.length === 0) {
+      dispatch(loadMissionsData());
+    }
+  }, []);
+
+  return (
+    <table className="list-container">
       <tr>
         <th>
           Mission
@@ -17,9 +28,11 @@ const MissionsLists = () => (
         </th>
         <th aria-label="none" />
       </tr>
-      <MissionsInfo />
-    </tbody>
-  </table>
-);
+      {missions.map((mission) => (
+        <MissionsInfo key={missions.id} data={mission} />
+      ))}
+    </table>
+  );
+};
 
-export default MissionsLists;
+export default Missions;
