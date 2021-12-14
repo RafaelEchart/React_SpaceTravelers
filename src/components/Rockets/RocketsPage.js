@@ -25,7 +25,8 @@ const Rockets = () => {
       key={rocket.id}
       description={rocket.description}
       image={rocket.image[0]}
-      name={rocket.name} />
+      name={rocket.name}
+      reserved={rocket.reserved} />
     ))}
 
     </React.Fragment>
