@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import Button from 'react-bootstrap/Button';
+import Badge from 'react-bootstrap/Badge';
+
 import { loadRockets } from '../../redux/Rockets/rockets';
 import './rocketCard.css';
 
@@ -356,7 +358,7 @@ const Rockets = () => {
       <div className='rocketCardTextContainer'>
 
       <h2>{rocket.rocket_name}</h2>
-      <span>{rocket.description}</span>
+      <span>{rocket.active ? <Badge bg="primary" className='reservedBadge'>Reserved</Badge> : ''}{rocket.description}</span>
       {!rocket.active ? <Button variant="primary">Reserve Rocket</Button> : <Button variant="outline-secondary">Cancel Reservation</Button>}
 
       </div>

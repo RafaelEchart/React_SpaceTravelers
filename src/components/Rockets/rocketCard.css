@@ -29,6 +29,14 @@
   font-size: 14px;
 }
 
+.reservedBadge {
+  font-size: 11px !important;
+  color: lightcyan;
+  background-color: #25a2b7 !important;
+  margin: 0px 8px 0px 0px !important;
+  padding: 3px 5px;
+}
+
 /* Desktop Queries 768px up */
 
 @media only screen and (min-width: 768px) {
