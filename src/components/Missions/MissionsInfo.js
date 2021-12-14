@@ -28,7 +28,8 @@ const MissionsInfo = (props) => {
 
   return (
     <>
-      <tr>
+      <tbody>
+        <tr>
         <td>
           <b id="missionName">{missionName}</b>
         </td>
@@ -64,7 +65,8 @@ const MissionsInfo = (props) => {
             </span>
           </button>
         </td>
-      </tr>
+        </tr>
+      </tbody>
     </>
   );
 };

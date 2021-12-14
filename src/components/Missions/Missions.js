@@ -16,18 +16,20 @@ const Missions = () => {
 
   return (
     <table className="list-container">
-      <tr>
-        <th>
-          Mission
-        </th>
-        <th>
-          Description
-        </th>
-        <th>
-          Status
-        </th>
-        <th aria-label="none" />
-      </tr>
+      <thead>
+        <tr>
+          <th>
+            Mission
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Status
+          </th>
+          <th aria-label="none" />
+        </tr>
+      </thead>
       {missions.map((mission) => (
         <MissionsInfo key={missions.id} data={mission} />
       ))}
