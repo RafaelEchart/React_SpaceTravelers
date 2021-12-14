@@ -30,9 +30,11 @@ const Missions = () => {
           <th aria-label="none" />
         </tr>
       </thead>
-      {missions.map((mission) => (
-        <MissionsInfo key={missions.id} data={mission} />
-      ))}
+      <tbody>
+        {missions.map((mission) => (
+          <MissionsInfo key={missions.id} data={mission} />
+        ))}
+      </tbody>
     </table>
   );
 };
