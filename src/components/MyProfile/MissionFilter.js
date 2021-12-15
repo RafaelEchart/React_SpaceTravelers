@@ -18,6 +18,11 @@ const MissionsFilter = () => {
           {mission.mission_name}
         </li>
       ))}
+
+    {!joinedMissions.length && <li>
+          There is no joined missions!
+        </li>
+    }
     </>
   );
 };
