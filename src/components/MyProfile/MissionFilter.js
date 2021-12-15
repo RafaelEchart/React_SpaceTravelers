@@ -1,7 +1,25 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-const MissionFilter = () => (
-  <li>Mission Name</li>
-);
+const MissionsFilter = () => {
+  const missionsStorage = useSelector((state) => state.missions);
 
-export default MissionFilter;
+  const joinedMissions = missionsStorage.filter((mission) => {
+    if (mission.status === true) {
+      return mission;
+    }
+    return null;
+  });
+
+  return (
+    <>
+      {joinedMissions.map((mission) => (
+        <li key={mission.mission_id}>
+          {mission.mission_name}
+        </li>
+      ))}
+    </>
+  );
+};
+
+export default MissionsFilter;

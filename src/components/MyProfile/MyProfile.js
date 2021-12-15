@@ -1,6 +1,7 @@
 import React from 'react';
 import MissionFilter from './MissionFilter';
 import RocketsFilter from './RocketsFilter';
+import './MyProfile.css';
 
 const MyProfile = () => (
   <div>
