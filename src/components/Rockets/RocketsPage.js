@@ -10,7 +10,7 @@ const Rockets = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (document.readyState !== 'complete') {
+    if (rockets.length === 0) {
       dispatch(loadRockets());
     }
   }, []);
