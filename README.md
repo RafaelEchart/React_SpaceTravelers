@@ -4,6 +4,8 @@
 
 > This project is in progress.
 
+![screenshot](./src/assets/project.gif)
+
 
 ## Built With
 
