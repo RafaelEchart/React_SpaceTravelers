@@ -1,4 +1,4 @@
-## Copyright 2021, [Rafael Echart, Amr Ahmed]
+## Copyright 2021, [Rafael Echart, Vanessa Aoki]
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this [Website] and associated documentation files, to deal in the [Website] without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the [Website], and to permit persons to whom the [Website] is furnished to do so, subject to the following conditions:
 
