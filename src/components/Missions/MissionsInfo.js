@@ -42,7 +42,7 @@ const MissionsInfo = (props) => {
               ? 'button-status button-status-active'
               : 'button-status'}
           >
-            <span>
+            <span className="mission_span">
               {status
                 ? 'Active Member'
                 : 'NOT A MEMBER'}
@@ -57,7 +57,7 @@ const MissionsInfo = (props) => {
               : 'button-join'}
             onClick={statusChange}
           >
-            <span>
+            <span className="mission_span">
               {status
                 ? 'Cancel Mission'
                 : 'Join Mission'}
