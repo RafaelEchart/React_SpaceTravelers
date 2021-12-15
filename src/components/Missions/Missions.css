@@ -61,3 +61,9 @@ tr:nth-child(even) {
   border: 1.5px solid red;
   color: red;
 }
+
+.mission_error_message {
+  text-align: center;
+  font-weight: bold;
+  color: red;
+}
