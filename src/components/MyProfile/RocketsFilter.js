@@ -3,23 +3,34 @@ import { useSelector } from 'react-redux';
 
 const RocketsFilter = () => {
   const rocketStorage = useSelector((state) => state.rockets);
-
-  const reservedRockets = rocketStorage.filter((rocket) => {
-    if (rocket.reserved === true) {
-      return rocket;
-    }
-    return null;
-  });
+  let reservedRockets;
+  if (rocketStorage.length) {
+    reservedRockets = rocketStorage.filter((rocket) => {
+      if (rocket.reserved === true) {
+        return rocket;
+      }
+      return null;
+    });
+  } else {
+    reservedRockets = false;
+  }
 
   return (
     <>
-    {reservedRockets.map((rocket) => (
+
+    {reservedRockets && <React.Fragment>
+      {reservedRockets.length ? reservedRockets.map((rocket) => (
         <li key={rocket.id}>
           {rocket.name}
         </li>
-    ))}
-    {!reservedRockets.length && <li>
+      ))
+        : <li>
           There is no reserved rockets!
+        </li> }
+    </React.Fragment> }
+
+    {!reservedRockets && <li className='mission_error_message'>
+          Network Error: Try again!
         </li>
     }
     </>
