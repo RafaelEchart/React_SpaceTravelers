@@ -10,7 +10,7 @@ const MissionsProfile = () => {
     if (missionsStorage.error === true) {
       return (<li className="mission_error_message">Network Error: Try again!</li>);
     }
-    return (<MissionFilter />);
+    return (<MissionFilter missionsStorage={missionsStorage} />);
   };
 
   return (

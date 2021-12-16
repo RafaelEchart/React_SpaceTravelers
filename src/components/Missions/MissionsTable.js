@@ -1,10 +1,9 @@
 import { React } from 'react';
-import { useSelector } from 'react-redux';
 import MissionsInfo from './MissionsInfo';
 import './Missions.css';
 
-const MissionsTable = () => {
-  const missions = useSelector((state) => state.missions);
+const MissionsTable = (props) => {
+  const { missions } = props;
 
   return (
     <table className="list-container">

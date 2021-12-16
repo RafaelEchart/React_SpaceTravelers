@@ -18,7 +18,7 @@ const Missions = () => {
     if (missions.error === true) {
       return (<p className='mission_error_message'>There was an error loading your missions, please try to reload the page</p>);
     }
-    return (<MissionsTable />);
+    return (<MissionsTable missions={missions} />);
   };
 
   return (
