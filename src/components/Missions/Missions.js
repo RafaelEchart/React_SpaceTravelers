@@ -1,7 +1,7 @@
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { loadMissionsData } from '../../redux/Missions/missions';
-import MissionsInfo from './MissionsInfo';
+import MissionsTable from './MissionsTable';
 import './Missions.css';
 
 const Missions = () => {
@@ -14,28 +14,17 @@ const Missions = () => {
     }
   }, []);
 
+  const isError = () => {
+    if (missions.error === true) {
+      return (<p className='mission_error_message'>There was an error loading your missions, please try to reload the page</p>);
+    }
+    return (<MissionsTable missions={missions} />);
+  };
+
   return (
-    <table className="list-container">
-      <thead>
-        <tr>
-          <th>
-            Mission
-          </th>
-          <th>
-            Description
-          </th>
-          <th>
-            Status
-          </th>
-          <th aria-label="none" />
-        </tr>
-      </thead>
-        <tbody>
-          {missions.map((mission) => (
-              <MissionsInfo key={missions.indexOf(mission)} data={mission} />
-          ))}
-        </tbody>
-    </table>
+    <>
+      {isError()}
+    </>
   );
 };
 

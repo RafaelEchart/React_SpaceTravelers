@@ -1,12 +1,11 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
 
-const MissionsFilter = () => {
-  const missionsStorage = useSelector((state) => state.missions);
+const MissionsFilter = (props) => {
+  const { missionsStorage } = props;
 
   const joinedMissions = missionsStorage.filter((mission) => {
     if (mission.status === true) {
-      return mission;
+      return missionsStorage;
     }
     return null;
   });

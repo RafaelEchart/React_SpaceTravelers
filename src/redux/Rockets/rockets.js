@@ -16,18 +16,22 @@ export const reservationRocket = (payload) => ({
 
 export const loadRockets = () => (dispatch) => {
   getRockets().then((rockets) => {
-    const tempRocketData = [];
-    rockets.forEach((rocket) => {
-      const parseData = {};
-      parseData.id = rocket.rocket_id;
-      parseData.name = rocket.rocket_name;
-      parseData.description = rocket.description;
-      parseData.image = rocket.flickr_images;
-      parseData.reserved = false;
+    if (rockets !== false) {
+      const tempRocketData = [];
+      rockets.forEach((rocket) => {
+        const parseData = {};
+        parseData.id = rocket.rocket_id;
+        parseData.name = rocket.rocket_name;
+        parseData.description = rocket.description;
+        parseData.image = rocket.flickr_images;
+        parseData.reserved = false;
 
-      tempRocketData.push(parseData);
-    });
-    dispatch(loadRocket(tempRocketData));
+        tempRocketData.push(parseData);
+      });
+      dispatch(loadRocket(tempRocketData));
+    } else {
+      dispatch(loadRocket(false));
+    }
   });
 };
 

@@ -19,7 +19,7 @@ const Rockets = () => {
 
     <React.Fragment>
 
-    {rockets.map((rocket) => (
+    {rockets && rockets.map((rocket) => (
       <RocketCard
       id={rocket.id}
       key={rocket.id}
@@ -28,6 +28,8 @@ const Rockets = () => {
       name={rocket.name}
       reserved={rocket.reserved} />
     ))}
+
+    {!rockets && <p className='mission_error_message'>There was an error loading the rockets, please try to reload the page</p>}
 
     </React.Fragment>
 
