@@ -6,7 +6,7 @@ const MissionsFilter = () => {
 
   const joinedMissions = missionsStorage.filter((mission) => {
     if (mission.status === true) {
-      return mission;
+      return missionsStorage;
     }
     return null;
   });
