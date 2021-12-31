@@ -22,11 +22,11 @@ In the profile page, the user can also see what missions/rockets they have joine
 To get a local copy up and running follow these simple example steps.
 1. In your terminal, type the following, to clone this repository:
 ```sh
-$ git clone https://github.com/RafaelEchart/React-SpaceTravelers.git
+$ git clone https://github.com/RafaelEchart/React_SpaceTravelers.git
 ```
 2. After, run the following commands in your terminal:
 ```sh
-$ cd React-SpaceTravelers
+$ cd React_SpaceTravelers
 $ npm install
 $ npm start
 ```
@@ -60,15 +60,15 @@ $ npm start
 
 ## Authors
 
-👤 **Vanessa Aoki**
-
-- GitHub: [@VanessaAoki](https://github.com/VanessaAoki)
-- Twitter: [@VanessaSAoki](https://twitter.com/VanessaSAoki)
-
 👤 **Rafael Echart**
 
 - GitHub: [@rafaelechart](https://github.com/rafaelechart)
 - Twitter: [@rafaechart](https://twitter.com/rafaechart)
+
+👤 **Vanessa Aoki**
+
+- GitHub: [@VanessaAoki](https://github.com/VanessaAoki)
+- Twitter: [@VanessaSAoki](https://twitter.com/VanessaSAoki)
 
 
 ## 🤝 Contributing
